@@ -1,0 +1,89 @@
+/**
+ * Base Element Styles
+ */
+
+ * {
+    box-sizing: border-box;
+ }
+
+ body {
+    line-height: 1.6;
+    color: #3a3a3a;
+ }
+
+ /**
+  * Base Layout Styles
+ */
+
+
+/* Navigation */
+
+.name {
+    margin: 0;
+  }
+
+
+
+/**
+ * Layout Containers
+ */
+
+ .container {
+    padding-left: 1em;
+    padding-right: 1em;
+ }
+
+ .main-header {
+	padding: 1.5em 0;
+	background: #3acec2;
+}
+
+.main-footer { 
+	text-align: center;
+	padding: 2em 0;
+	background: #d9e4ea;
+}
+
+/**
+ * Flexbox Layout
+ */
+
+ .header, nav {
+   display: flex;
+   flex-direction: column;
+ }
+
+ .header {
+   justify-content: space-between;
+ }
+
+ .nav {
+    flex: 1;
+    justify-content: space-around;
+ }
+
+ @media all and (min-width: 640px) {
+    .header, .nav {
+       flex-direction: row;
+    }
+ }
+
+/**
+ * Media Queries
+ */
+
+ @media(min-width: 769px) {
+    .wrap{
+       min-height: calc(100vh  - 89px); 
+    }
+   }
+
+@media only screen and (min-width:768px),
+           only screen and (min-width: 700px) and (orientation: landscape)
+
+
+.container {
+        width: 70%;
+        max-width: 1000px;
+        margin: 0 auto;
+     }
