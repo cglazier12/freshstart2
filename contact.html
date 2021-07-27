@@ -1,56 +1,74 @@
-<title>Contact Us</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+<!DOCTYPE html>
+<html>
+<head>
 
-<header> 
-    <body>
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+</head>
+<body>
+
     <div class="content">
-      <a class="logo" href="index.html">Kentucky Kayaking</a>
       <a id="myLink" href="#" onclick="MyFunction();return false;">link text</a>
-      
-      <!-- Start Navigation -->
-      <nav>
-        <ul>
-                  <li><a href="#" class="active">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-              </ul>
-      </nav>
-      
     </div> 
-    <div class="loading loading--full-height"></div>
-    </body>
-  </header>  
 
+              <!-- Start Navigation -->
+<div class="hero-image">
+  <div class="nav-flex">
+    <button class="menu-btn">
+      <div class="bar"></div>
+    </button>
+    <nav>
+      <ul class="menu-list nav-hidden">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>  
 
-<div class="container">
-    <form action="action_page.php">
-  
-      <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      <input id-"name" type="text">
-
-  
-      <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-  
-      <label for="state">Country</label>
-      <select id="state" name="state">
-        <option value="kentucky">Kentucky</option>
-        <option value="Indiana">Indiana</option>
-        <option value="Tennessee">Tennessee</option>
-      </select>
-  
-      <label for="subject">Subject</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-  
-      <input type="submit" value="Submit">
-      <button onclick="submitFirstName(event)" tyle="button">Submit</button>
-  
-    </form>
+  <div>
+    <div>
+      <div>
+        <div class="hero-text">
+            <h1 style="font-size:50px">Kentucky Kayaking</h1>
+            <p>Where Kayaking Thrives</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <body>
+</div>
+
+<div>
+  <h3>Submit your name below to be added to our communications list</h3>
+</div>
+
+
+<div class="contact-form"></div>
+
+    <form id="myForm" name="myForm">
+      <div>
+          <label for="username">Enter name:</label>
+          <input type="text" id="username" name="username">
+      </div>
+      <button type="button" onclick="clickMe()">Add Me!</button>
+  </form>
+  
+  <script>
+      // JS
+      function clickMe(){
+      let myForm = document.getElementById('myForm');
+      let formData = new FormData(myForm);
+      console.log(formData.get('username'));
+  
+  }
+  </script>
+
     <footer>
-      <p>Copyright &copy; 2021 Kentucky Kayaking</p>
-   </footer> 
+        <p>Copyright &copy; 2021 Kentucky Kayaking</p>
+    </footer>
+
   </body>
+
+</html>

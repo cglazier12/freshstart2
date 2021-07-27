@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  font-size: 15px;
+  font-weight: 300; 
+}
+
+h1 {
+font-size: 40px;
+font-weight: 700;
+}
+
+h2 {
+font-size: 33px;
+font-weight: 400;
+}
+
+h3 {
+font-size: 28px;
+font-weight: 400;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 300;
+  }
+
+a {
+  color: #FFF;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+p {
+font-size: 16px;
+font-weight: 400;
+padding: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Begin Navigation Styling */
+.nav-flex {
+  display: flex;
+  padding: 15px 50px 15px 50px;
+  justify-content: space-between;
+}
+
+.menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu-item:not(:last-child){
+  margin-right: 1rem;
+}
+
+.menu-item a,
+.logo {
+  text-decoration: none;
+  color: #333;
+}
+
+.hero-image {
+  font-size: 1.5rem;
+}
+
+.menu-btn {
+  display: none;
+  width: 35px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.bar {
+  height: 3px;
+  background-color: #fff;
+  margin: 0.5rem 0;
+}
+
+.menu-btn::after,
+.menu-btn::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* Making the Navbar Responsive */
+
+@media(max-width: 400px) {
+  .menu-btn {
+      display: block;
+  }
+
+  .main-nav {
+      flex-wrap: wrap;
+  }
+
+  .menu-list {
+      flex-basis: 100%;
+      flex-grow: 1;
+      flex-direction: column;
+  }
+
+  .menu-item {
+      margin-top: 0.5rem;
+  }
+
+  .nav-hidden {
+      display: none;
+  }
+}
+
+nav {
+  display: flex;
+	width: 100%;
+	display: none;
+}
+
+nav ul {
+margin-top: auto;
+}
+
+.active {
+  color: #5FC0DC;
+}
+
+.side-nav {
+  text-align: center;
+}
+
+@media screen and (min-width: 872px) {
+  
+  .content {
+    padding: 0 50px;
+  }
+  
+  .toggler {
+    display: none;
+  }
+  
+  nav {
+    display: inline-block !important; /* prevents the navigation to hide when resizing */
+    position: relative;
+    width: auto;
+    float: none;
+    padding: 5px 0;
+  }
+ 
+  nav ul {
+    float: left;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    padding-right: 20px;
+  }
+  
+  side-nav {
+   float: right;
+  }
+}
+
+/**
+* Hero Image Styling
+*/
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/Kayaking.jpg");
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* hero button*/
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+/**
+* Contact Us Styling
+*/
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box;
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+/* Add a background color and some padding around the form */
+.contact-form {
+  display: flex;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/**
+* Two Column Boxes****
+*/
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  clear: both;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn);
+  }
+  from {
+    transform: rotate(0turn);
+  }
+
+}
+
+/**
+* Footer Styling
+*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #5FC0DC;
+  color: #fff;
+}
