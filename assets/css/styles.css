@@ -35,12 +35,23 @@ a {
   text-decoration: none;
 }
 
+/*
+	dont put padding on your p tags, look at how the text alignment is on the two column section, we want the p font to align with the headers
+	Think about what you are trying to accomplish. If I just want to add 20px of padding to an element than imagine making a css class called .p-20 { padding: 20px; }
+	Now whenever I need to add this amount of padding to elements I can just type p-20 in my html classes and I know what I am getting.
+	CSS looks really good though overall.
+ */
+
+
 p {
 font-size: 16px;
 font-weight: 400;
 padding: 20px;
 }
 
+/*
+	the asterisk targets EVERY html element. so when thinking about specificity it should be at the top of the file.
+ */
 * {
   margin: 0;
   padding: 0;
@@ -48,6 +59,10 @@ padding: 20px;
 }
 
 /* Begin Navigation Styling */
+
+/*
+ So mobile doesnt look too bad, we do need the two column layout to be a one column layout though. Look at the css rule "flex-direction" now imagine how we can use media queries to alter this rule at a certain breakpoint. ie. flex-direction: row for a certain breakpoint and flex-direction: column on another breakpoint
+ */
 .nav-flex {
   display: flex;
   padding: 15px 50px 15px 50px;
@@ -83,6 +98,7 @@ padding: 20px;
   cursor: pointer;
   padding: 0;
 }
+
 
 .bar {
   height: 3px;
