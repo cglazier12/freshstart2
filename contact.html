@@ -48,20 +48,32 @@
 <div class="contact-form"></div>
 
     <form id="myForm" name="myForm">
-      <div>
-          <label for="username">Enter name:</label>
-          <input type="text" id="username" name="username">
+      <div class="input-group">
+          <label for="first_name">First Name:</label>
+          <input type="text" id="first_name" name="first_name">
       </div>
+        <div class="input-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name">
+        </div>
       <button type="button" onclick="clickMe()">Add Me!</button>
   </form>
   
   <script>
       // JS
-      function clickMe(){
-      let myForm = document.getElementById('myForm');
-      let formData = new FormData(myForm);
-      console.log(formData.get('username'));
-  
+      function clickMe()
+      {
+          let myForm = document.getElementById('myForm');
+          let formData = new FormData(myForm);
+
+          let firstName = (formData.get('first_name'));
+          let lastName = (formData.get('last_name'));
+
+          if (firstName.length > 3) {
+              alert(firstName + " is a valid name!")
+          } else {
+              alert(firstName + " is not long enough")
+          }
   }
   </script>
 
